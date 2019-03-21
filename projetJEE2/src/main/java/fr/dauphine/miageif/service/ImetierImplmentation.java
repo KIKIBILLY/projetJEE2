@@ -1,9 +1,9 @@
-package metier;
+package fr.dauphine.miageif.service;
 
 
-import dao.BaseDao;
-import dao.BaseDaoImp;
-import bean.User;
+import fr.dauphine.miageif.bean.User;
+import fr.dauphine.miageif.dao.BaseDao;
+import fr.dauphine.miageif.dao.BaseDaoImp;
 
 public class ImetierImplmentation implements Imetier {
 

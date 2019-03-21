@@ -1,6 +1,6 @@
-package dao;
+package fr.dauphine.miageif.dao;
 
-import bean.User;
+import fr.dauphine.miageif.bean.User;
 
 public interface BaseDao {
 	

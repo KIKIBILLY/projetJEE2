@@ -1,4 +1,4 @@
-package bean;
+package fr.dauphine.miageif.bean;
 
 
 public class User {

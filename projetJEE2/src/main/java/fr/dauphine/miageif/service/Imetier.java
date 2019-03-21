@@ -1,7 +1,7 @@
-package metier;
+package fr.dauphine.miageif.service;
 
 
-import bean.User;
+import fr.dauphine.miageif.bean.User;
 
 public interface Imetier {
  

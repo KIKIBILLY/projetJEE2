@@ -5,7 +5,7 @@
 	version="3.0">
 	<servlet>
 		<servlet-name>LoginControleur</servlet-name>
-		<servlet-class>controleur.LoginControleur</servlet-class>
+		<servlet-class>fr.dauphine.miageif.controleur.LoginControleur</servlet-class>
 	</servlet>
 	<servlet-mapping>
 		<servlet-name>LoginControleur</servlet-name>
@@ -13,7 +13,7 @@
 	</servlet-mapping>
 	<servlet>
 		<servlet-name>registration</servlet-name>
-		<servlet-class>controleur.EnregistrementControleur</servlet-class>
+		<servlet-class>fr.dauphine.miageif.controleur.EnregistrementControleur</servlet-class>
 	</servlet>
 	<servlet-mapping>
 		<servlet-name>registration</servlet-name>

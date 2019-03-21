@@ -1,4 +1,4 @@
-package util;
+package fr.dauphine.miageif.util;
 
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;

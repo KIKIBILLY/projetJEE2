@@ -1,4 +1,4 @@
-package controleur;
+package fr.dauphine.miageif.controleur;
 
 
 import java.io.IOException;
@@ -8,9 +8,9 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-import dao.BaseDao;
-import dao.BaseDaoImp;
-import bean.User;
+import fr.dauphine.miageif.bean.User;
+import fr.dauphine.miageif.dao.BaseDao;
+import fr.dauphine.miageif.dao.BaseDaoImp;
 
 
 public class EnregistrementControleur extends HttpServlet {

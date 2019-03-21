@@ -1,9 +1,9 @@
-package dao;
+package fr.dauphine.miageif.dao;
 
 import org.hibernate.Session;
 
-import bean.User;
-import util.HibernateUtil;
+import fr.dauphine.miageif.bean.User;
+import fr.dauphine.miageif.util.HibernateUtil;
 
 public class BaseDaoImp implements BaseDao {
 	
