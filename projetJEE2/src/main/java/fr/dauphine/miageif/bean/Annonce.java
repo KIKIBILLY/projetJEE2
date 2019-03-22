@@ -12,7 +12,7 @@ public class Annonce {
 	}
 
 	public String getAdresse() {
-		return adresse;
+		return adresse ;
 	}
 
 	public void setAdresse(String adresse) {
