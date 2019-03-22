@@ -15,8 +15,19 @@
 		<servlet-name>registration</servlet-name>
 		<servlet-class>fr.dauphine.miageif.controleur.EnregistrementControleur</servlet-class>
 	</servlet>
+	<servlet>
+		<description>
+		</description>
+		<display-name>MagasinControleur</display-name>
+		<servlet-name>MagasinControleur</servlet-name>
+		<servlet-class>fr.dauphine.miageif.controleur.MagasinControleur</servlet-class>
+	</servlet>
 	<servlet-mapping>
 		<servlet-name>registration</servlet-name>
 		<url-pattern>/registration</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>MagasinControleur</servlet-name>
+		<url-pattern>/magasin</url-pattern>
 	</servlet-mapping>
 </web-app>
