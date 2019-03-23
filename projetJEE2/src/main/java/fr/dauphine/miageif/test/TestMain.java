@@ -5,11 +5,14 @@ import java.sql.SQLException;
 
 import fr.dauphine.miageif.config.Configuration;
 import fr.dauphine.miageif.db.MysqlDB;
+import fr.dauphine.miageif.util.GenerateurID;
 
 public class TestMain {
 
 	public static void main(String[] args) throws SQLException {
-		MysqlDB db = new MysqlDB();
+		
+		System.out.println(GenerateurID.generate(12));
+		/*MysqlDB db = new MysqlDB();
 		Configuration conf = new Configuration();
 		try {
 			db.open(conf.dbHost, conf.dbPort, conf.dbName, conf.dbAdminLogin, conf.dbAdminPwd);
@@ -35,7 +38,7 @@ public class TestMain {
 		} catch (SQLException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
-		}
+		}*/
 
 	}
 
