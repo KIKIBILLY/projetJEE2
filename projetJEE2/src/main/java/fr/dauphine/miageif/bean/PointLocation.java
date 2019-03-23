@@ -1,5 +1,7 @@
 package fr.dauphine.miageif.bean;
 
+import java.util.List;
+
 /**
  * @author REZKELLAH
  *
@@ -9,6 +11,7 @@ public class PointLocation {
 	private String idPL;
 	private String libelle;
 	private String Adresse;
+	private List<Employe> listEmploye;
 
 	public String getIdPL() {
 		return idPL;
@@ -32,5 +35,13 @@ public class PointLocation {
 
 	public void setAdresse(String adresse) {
 		Adresse = adresse;
+	}
+
+	public List<Employe> getListEmploye() {
+		return listEmploye;
+	}
+
+	public void setListEmploye(List<Employe> listEmploye) {
+		this.listEmploye = listEmploye;
 	}
 }

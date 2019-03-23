@@ -1,8 +1,5 @@
 package fr.dauphine.miageif.bean;
 
-import java.util.ArrayList;
-import java.util.List;
-
 /**
  * @author REZKELLAH
  *

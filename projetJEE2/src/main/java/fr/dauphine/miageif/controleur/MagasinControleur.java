@@ -10,6 +10,10 @@ import javax.servlet.http.HttpServletResponse;
 /**
  * Servlet implementation class ListProduit
  */
+/**
+ * @author REZKELLAH
+ *
+ */
 public class MagasinControleur extends HttpServlet {
 	private static final long serialVersionUID = 1L;
        
