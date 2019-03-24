@@ -7,6 +7,8 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
+import fr.dauphine.miageif.dao.ObjetDao;
+
 /**
  * Servlet implementation class ListProduit
  */
@@ -30,8 +32,9 @@ public class MagasinControleur extends HttpServlet {
 	 */
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 			
-			
-			this.getServletContext().getRequestDispatcher("/store.jsp").forward(request, response);
+		ObjetDao objet= new ObjetDao();
+		request.setAttribute("objets", objet.getAllListObjet());
+		this.getServletContext().getRequestDispatcher("/store.jsp").forward(request, response);
 		
 	}
 
