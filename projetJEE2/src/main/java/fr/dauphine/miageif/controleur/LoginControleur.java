@@ -14,6 +14,7 @@ import fr.dauphine.miageif.service.ImetierImplmentation;
  */
 
 
+
 public class LoginControleur extends HttpServlet {
  private static final long serialVersionUID = 1L;
 
@@ -32,7 +33,7 @@ public class LoginControleur extends HttpServlet {
   String username = request.getParameter("username");
   String password = request.getParameter("password");
   
-  System.out.println(username + " :: " + password);
+  
   String page = "login.jsp";
   if(username.trim().length() >= 0 && username != null &&
     password.trim().length() >= 0 && password != null) {

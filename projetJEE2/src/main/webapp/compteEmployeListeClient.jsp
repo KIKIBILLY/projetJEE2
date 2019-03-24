@@ -1,3 +1,4 @@
+<%@ taglib uri='http://java.sun.com/jsp/jstl/core' prefix='c'%>
 <!DOCTYPE html>
 <html>
 <head>
@@ -149,9 +150,13 @@
             </div>
             <!-- /.box-header -->
             <div class="box-body">
-              <table id="example1" class="table table-bordered table-striped">
+            
+              <table id="example1" class="table table-bordered table-striped" >
+              
                 <thead>
                 <tr>
+                 
+                  <th>Identifiant</th>
                   <th>Nom</th>
                   <th>Prenom</th>
                   <th>Email</th>
@@ -160,18 +165,24 @@
                 </tr>
                 </thead>
                 <tbody>
+                
+              
+                
+                <c:forEach items="${ clients }" var="client">
+                
                 <tr>
-                  <td>Trident</td>
-                  <td>Internet
-                    Explorer 4.0
-                  </td>
-                  <td>Win 95+</td>
-                  <td> 4</td>
-                  <td><button type="button" class="btn btn-block btn-success btn-xs"> Reservations en cours</button> </td>
+                  <td><c:out value="${ client.identifiant}" /></td>
+                  <td><c:out value="${ client.nom }" />
+                  <td><c:out value="${ client.prenom }" /></td>
+                  <td> <c:out value="${ client.credential.email }" /></td>
+                  <td> pas encore </td>
+                  <td><a href = "ClientControleur?reservation=${client.identifiant}"> <button  class="btn btn-block btn-success btn-xs"> Reservations en cours</button> </a> </td>
                 </tr>
                 
-               
+                </c:forEach>
+              
               </table>
+               
             </div>
             <!-- /.box-body -->
           </div>

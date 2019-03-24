@@ -22,6 +22,20 @@
 		<servlet-name>MagasinControleur</servlet-name>
 		<servlet-class>fr.dauphine.miageif.controleur.MagasinControleur</servlet-class>
 	</servlet>
+	<servlet>
+		<description>
+		</description>
+		<display-name>ListeClient</display-name>
+		<servlet-name>ListeClient</servlet-name>
+		<servlet-class>fr.dauphine.miageif.controleur.ListeClientControleur</servlet-class>
+	</servlet>
+	<servlet>
+		<description>
+		</description>
+		<display-name>ClientControleur</display-name>
+		<servlet-name>ClientControleur</servlet-name>
+		<servlet-class>fr.dauphine.miageif.controleur.ClientControleur</servlet-class>
+	</servlet>
 	<servlet-mapping>
 		<servlet-name>registration</servlet-name>
 		<url-pattern>/registration</url-pattern>
@@ -29,5 +43,13 @@
 	<servlet-mapping>
 		<servlet-name>MagasinControleur</servlet-name>
 		<url-pattern>/magasin</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>ListeClient</servlet-name>
+		<url-pattern>/ListeClient</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>ClientControleur</servlet-name>
+		<url-pattern>/ClientControleur</url-pattern>
 	</servlet-mapping>
 </web-app>

@@ -29,11 +29,5 @@ public void setPassword(String password) {
 
 
 
-public Credentials(String email, String password) {
-	super();
-	this.email = email;
-	this.password = password;
-}
-
 
 }

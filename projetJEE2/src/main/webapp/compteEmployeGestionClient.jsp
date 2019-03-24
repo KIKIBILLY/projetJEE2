@@ -1,3 +1,4 @@
+<%@ taglib uri='http://java.sun.com/jsp/jstl/core' prefix='c'%>
 <!DOCTYPE html>
 <html>
 <head>
@@ -146,20 +147,33 @@
           <!-- Profile Image -->
           <div class="box box-primary">
             <div class="box-body box-profile">
+            
+            
+            
+            
               <img class="profile-user-img img-responsive img-circle" src="./dist/img/user4-128x128.jpg" alt="User profile picture">
 
-              <h3 class="profile-username text-center">Nina Mcintire</h3>
+              <h3 class="profile-username text-center"><c:out value="${ client.nom}"/></h3>
 
-              <p class="text-muted text-center">Software Engineer</p>
+              <p class="text-muted text-center" > <c:out value="${ client.credential.email}" /></p>
 
               <ul class="list-group list-group-unbordered">
                 <li class="list-group-item">
-                  <b>RÃ©servations</b> <a class="pull-right">22</a>
+                
+                
+                
+                  <b>Réservations</b> <a class="pull-right">22</a>
                 </li>
                 <li class="list-group-item">
                   <b>Locations</b> <a class="pull-right">3</a>
                 </li>
               </ul>
+           
+              
+              
+              
+              
+              
             </div>
             <!-- /.box-body -->
           </div>
