@@ -1,17 +1,21 @@
 package fr.dauphine.miageif.test;
 
+import java.io.IOException;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 
 import fr.dauphine.miageif.config.Configuration;
+import fr.dauphine.miageif.dao.ObjetDao;
 import fr.dauphine.miageif.db.MysqlDB;
 import fr.dauphine.miageif.util.GenerateurID;
 
 public class TestMain {
 
-	public static void main(String[] args) throws SQLException {
+	public static void main(String[] args) throws SQLException, IOException {
 		
-		System.out.println(GenerateurID.generate(12));
+		ObjetDao ob = new ObjetDao();
+		System.out.println(ob.getAllListObjet().get(0).getImages().get(0));
+		//System.out.println(GenerateurID.generate(12));
 		/*MysqlDB db = new MysqlDB();
 		Configuration conf = new Configuration();
 		try {

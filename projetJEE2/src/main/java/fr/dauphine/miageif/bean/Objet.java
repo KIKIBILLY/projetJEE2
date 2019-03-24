@@ -1,5 +1,8 @@
 package fr.dauphine.miageif.bean;
 
+import java.util.ArrayList;
+import java.util.List;
+
 /**
  * @author REZKELLAH
  *
@@ -8,6 +11,7 @@ public class Objet {
 
 	private String identifiant;
 	private String categorie;
+	private List<String> images= new ArrayList<String>();
 	private FicheProduit fp;
 
 	public String getIdentifiant() {
@@ -32,6 +36,14 @@ public class Objet {
 
 	public void setFp(FicheProduit fp) {
 		this.fp = fp;
+	}
+
+	public List<String> getImages() {
+		return images;
+	}
+
+	public void setImages(List<String> images) {
+		this.images = images;
 	}
 
 }
