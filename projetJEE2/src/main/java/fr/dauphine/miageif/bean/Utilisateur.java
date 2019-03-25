@@ -1,14 +1,50 @@
 package fr.dauphine.miageif.bean;
 
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+import javax.persistence.OneToOne;
+import javax.persistence.Table;
+
+@Entity
+@Table(name="utilisateur")
 public class Utilisateur {
 
-String identifiant;
-String adresseHabitation;
-String numeroTel;
-String nom;
-String prenom;
-Credentials credential;
+@Id
+@GeneratedValue(strategy = GenerationType.IDENTITY)
+@Column(name= "identifiant")
+private String identifiant;
 
+@Column(name="adresse_habitation")
+private String adresseHabitation;
+
+@Column(name="num_tel")
+private String numeroTel;
+
+
+@Column(name="nom")
+private String nom;
+
+
+@Column(name="prenom")
+private String prenom;
+
+
+@OneToOne(mappedBy = "user")
+private Credentials credential;
+
+
+@Column(name="url_photo")
+private String urlPhoto;
+
+public String getUrlPhoto() {
+	return urlPhoto;
+}
+public void setUrlPhoto(String urlPhoto) {
+	this.urlPhoto = urlPhoto;
+}
 public String getAdresseHabitation() {
 	return adresseHabitation;
 }

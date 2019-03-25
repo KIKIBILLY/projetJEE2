@@ -26,7 +26,7 @@ public class ClientControleur extends HttpServlet {
         super();
         // TODO Auto-generated constructor stub
     }
-//jjsjsjjs
+
 	/**
 	 * @see HttpServlet#doGet(HttpServletRequest request, HttpServletResponse response)
 	 */

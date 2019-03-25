@@ -32,7 +32,7 @@
       <form class="form-login" action="login" method="POST">
         <h2 class="form-login-heading">Connexion</h2>
         <div class="login-wrap">
-          <input type="text" class="form-control" placeholder="Nom d'utilisateur" name="username" required="required" autofocus>
+          <input type="text" class="form-control" placeholder="Email" name="email" required="required" autofocus>
           <br>
           <input type="password" class="form-control" placeholder="Mot de passe" name="password" required="required">
           <label class="checkbox">
@@ -50,7 +50,7 @@
  		  <% } %>
           <div class="registration">
             Nouveau client?<br/>
-            <a class="" href="loginRegistration2.jsp">
+            <a class="" href="loginRegistration.jsp">
               Creer un compte
               </a>
           </div>

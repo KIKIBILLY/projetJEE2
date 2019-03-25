@@ -41,6 +41,8 @@ public class ClientDao {
 				String prenom = rs.getString(5);
 				String numtel = rs.getString(6);
 				String adresse = rs.getString(7);
+				String urlphoto= rs.getString(8);
+				
 				
 				client.setIdentifiant(identifiant);
 				credential.setEmail(email);
@@ -50,7 +52,7 @@ public class ClientDao {
 				client.setPrenom(prenom);
 				client.setNumeroTel(numtel);
 				client.setAdresseHabitation(adresse);
-				
+				client.setUrlPhoto(urlphoto);
 			
 			}
 		} catch (SQLException e) {

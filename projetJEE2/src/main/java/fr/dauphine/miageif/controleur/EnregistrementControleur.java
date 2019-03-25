@@ -8,9 +8,10 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-import fr.dauphine.miageif.bean.User;
-import fr.dauphine.miageif.dao.BaseDao;
-import fr.dauphine.miageif.dao.BaseDaoImp;
+import fr.dauphine.miageif.bean.Credentials;
+import fr.dauphine.miageif.bean.Utilisateur;
+import fr.dauphine.miageif.dao.LoginDao;
+import fr.dauphine.miageif.dao.LoginDaoH;
 
 
 public class EnregistrementControleur extends HttpServlet {
@@ -38,18 +39,19 @@ public class EnregistrementControleur extends HttpServlet {
   String page = "loginRegistration.jsp";
  
   if(request.getParameter("password").equals(request.getParameter("confPassword"))){
-   User user = new User();
-   user.setUsername(request.getParameter("username"));
-   user.setPassword(request.getParameter("password"));
-   user.setFirstName(request.getParameter("firstName"));
-   user.setLastName(request.getParameter("lastName"));
-   user.setDob(request.getParameter("dob"));
-   user.setEmailId(request.getParameter("emailId"));
-   user.setMobileNo(request.getParameter("mobileNo"));
+   Utilisateur user = new Utilisateur();
+   Credentials credentials = new Credentials();
+   user.setNom(request.getParameter("nom"));
+   user.setPrenom(request.getParameter("prenom"));
+   credentials.setEmail(request.getParameter("email"));
+   credentials.setPassword(request.getParameter("password"));
+   user.setCredential(credentials);
+   user.setNumeroTel(request.getParameter("numtel"));
+   user.setUrlPhoto(request.getParameter("urlphoto"));
+   user.setAdresseHabitation(request.getParameter("adresse"));
    
-   System.out.println(user.toString());
-   BaseDao baseDao = new BaseDaoImp();
-   msg = baseDao.register(user);
+   LoginDao loginDao = new LoginDao();
+   msg = loginDao.register(user);
    page = "login.jsp";
   } 
   request.setAttribute("msg2", msg);

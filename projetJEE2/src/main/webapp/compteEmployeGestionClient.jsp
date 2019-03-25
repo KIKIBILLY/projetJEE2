@@ -82,7 +82,7 @@
                 <img src="./dist/img/user2-160x160.jpg" class="img-circle" alt="User Image">
 
                 <p>
-                  Arezki -Employ√©- 
+                  Arezki -EmployÈ- 
               </li>
               <!-- Menu Body -->
               
@@ -151,9 +151,9 @@
             
             
             
-              <img class="profile-user-img img-responsive img-circle" src="./dist/img/user4-128x128.jpg" alt="User profile picture">
+              <img class="profile-user-img img-responsive img-circle" src="${ client.urlPhoto}" alt="User profile picture">
 
-              <h3 class="profile-username text-center"><c:out value="${ client.nom}"/></h3>
+              <h3 class="profile-username text-center"><c:out value="${ client.nom} ${ client.prenom}"/></h3>
 
               <p class="text-muted text-center" > <c:out value="${ client.credential.email}" /></p>
 
@@ -162,10 +162,10 @@
                 
                 
                 
-                  <b>RÈservations</b> <a class="pull-right">22</a>
+                  <b>Nombre de RÈservations</b> <a class="pull-right">22</a>
                 </li>
                 <li class="list-group-item">
-                  <b>Locations</b> <a class="pull-right">3</a>
+                  <b>Nombre de Locations</b> <a class="pull-right">3</a>
                 </li>
               </ul>
            
@@ -186,18 +186,17 @@
             </div>
             <!-- /.box-header -->
             <div class="box-body">
-              <strong><i class="fa fa-book margin-r-5"></i> Information</strong>
+              <strong><i class="fa fa-book margin-r-5"></i> Numero de telephone</strong>
 
               <p class="text-muted">
-                Ce client est un un client potentiel
+                <c:out value="${ client.numeroTel}" />
               </p>
 
               <hr>
 
               <strong><i class="fa fa-map-marker margin-r-5"></i> Adresse</strong>
 
-              <p class="text-muted">France, Paris</p>
-
+              <p class="text-muted"><c:out value="${ client.adresseHabitation}" /></p>  
               <hr>
             </div>
             <!-- /.box-body -->
@@ -208,25 +207,24 @@
         <div class="col-md-9">
           <div class="nav-tabs-custom">
             <ul class="nav nav-tabs">
-              <li class="active"><a href="#reservation" data-toggle="tab">R√©servation</a></li>
+              <li class="active"><a href="#reservation" data-toggle="tab">RÈservation</a></li>
               <li><a href="#location" data-toggle="tab">Location</a></li>
-              <li><a href="#timeline" data-toggle="tab">Historique d'activit√©</a></li>
             </ul>
             <div class="tab-content">
               <div class="active tab-pane" id="reservation">
 
           <div class="box">
             <div class="box-header">
-              <h3 class="box-title">Liste des objets r√©serv√©s </h3>
+              <h3 class="box-title">Liste des objets rÈservÈs </h3>
             </div>
             <div class="box-body">
               <table id="example1" class="table table-bordered table-striped">
                 <thead>
                 <tr>
-                  <th>R√©f√©rence de l'objet</th>
+                  <th>RÈfÈrence de l'objet</th>
                   <th>Designation</th>
                   <th>Date de reservation</th>
-                  <th>Quantit√©</th>
+                  <th>QuantitÈ</th>
                   <th>Prix/jr</th>
                   <th>Action</th>
                 </tr>
@@ -252,7 +250,7 @@
             </div>
 
             <div class="box-footer">
-                <button type="submit" class="btn btn-primary" data-toggle="modal" data-target="#modal-default">Pr√©paration du contrat</button>
+                <button type="submit" class="btn btn-primary" data-toggle="modal" data-target="#modal-default">PrÈparation du contrat</button>
             </div>
             <!-- /.box-body -->
           </div>
@@ -270,16 +268,16 @@
 
           <div class="box">
             <div class="box-header">
-              <h3 class="box-title">Liste des objets lou√©s </h3>
+              <h3 class="box-title">Liste des objets louÈs </h3>
             </div>
             <div class="box-body">
               <table id="example2" class="table table-bordered table-striped">
                 <thead>
                 <tr>
-                  <th>R√©fer√©nce de l'objet</th>
+                  <th>RÈfÈrence de l'objet</th>
                   <th>Designation</th>
                   <th>Date de location</th>
-                  <th>Quantit√©</th>
+                  <th>QuantitÈ</th>
                   <th>Prix/jr</th>
                   <th>Action</th>
                 </tr>
@@ -312,96 +310,6 @@
 
 
 
-
-              <!-- /.tab-pane -->
-              <div class="tab-pane" id="timeline">
-                <!-- The timeline -->
-                <ul class="timeline timeline-inverse">
-                  <!-- timeline time label -->
-                  <li class="time-label">
-                        <span class="bg-red">
-                          10 Feb. 2014
-                        </span>
-                  </li>
-                  <!-- /.timeline-label -->
-                  <!-- timeline item -->
-                  <li>
-                    <i class="fa fa-envelope bg-blue"></i>
-
-                    <div class="timeline-item">
-                      <span class="time"><i class="fa fa-clock-o"></i> 12:05</span>
-
-                      <h3 class="timeline-header"><a href="#">Support Team</a> sent you an email</h3>
-
-                      <div class="timeline-body">
-                        Etsy doostang zoodles disqus groupon greplin oooj voxy zoodles,
-                        weebly ning heekya handango imeem plugg dopplr jibjab, movity
-                        jajah plickers sifteo edmodo ifttt zimbra. Babblely odeo kaboodle
-                        quora plaxo ideeli hulu weebly balihoo...
-                      </div>
-                      <div class="timeline-footer">
-                        <a class="btn btn-primary btn-xs">Read more</a>
-                        <a class="btn btn-danger btn-xs">Delete</a>
-                      </div>
-                    </div>
-                  </li>
-                  <!-- END timeline item -->
-                  <!-- timeline item -->
-                  <li>
-                    <i class="fa fa-user bg-aqua"></i>
-
-                    <div class="timeline-item">
-                      <span class="time"><i class="fa fa-clock-o"></i> 5 mins ago</span>
-
-                      <h3 class="timeline-header no-border"><a href="#">Sarah Young</a> accepted your friend request
-                      </h3>
-                    </div>
-                  </li>
-                  <!-- END timeline item -->
-                  <!-- timeline item -->
-                  <li>
-                    <i class="fa fa-comments bg-yellow"></i>
-
-                    <div class="timeline-item">
-                      <span class="time"><i class="fa fa-clock-o"></i> 27 mins ago</span>
-
-                      <h3 class="timeline-header"><a href="#">Jay White</a> commented on your post</h3>
-
-                      <div class="timeline-body">
-                        Take me to your leader!
-                        Switzerland is small and neutral!
-                        We are more like Germany, ambitious and misunderstood!
-                      </div>
-                      <div class="timeline-footer">
-                        <a class="btn btn-warning btn-flat btn-xs">View comment</a>
-                      </div>
-                    </div>
-                  </li>
-                  <!-- END timeline item -->
-                  <!-- timeline time label -->
-                  <li class="time-label">
-                        <span class="bg-green">
-                          3 Jan. 2014
-                        </span>
-                  </li>
-                  <!-- /.timeline-label -->
-                  <!-- timeline item -->
-                  <li>
-                    <i class="fa fa-camera bg-purple"></i>
-
-                    <div class="timeline-item">
-                      <span class="time"><i class="fa fa-clock-o"></i> 2 days ago</span>
-
-                      <h3 class="timeline-header"><a href="#">Mina Lee</a> uploaded new photos</h3>
-
-                      <div class="timeline-body">
-                        <img src="http://placehold.it/150x100" alt="..." class="margin">
-                        <img src="http://placehold.it/150x100" alt="..." class="margin">
-                        <img src="http://placehold.it/150x100" alt="..." class="margin">
-                        <img src="http://placehold.it/150x100" alt="..." class="margin">
-                      </div>
-                    </div>
-                  </li>
                   <!-- END timeline item -->
                   <li>
                     <i class="fa fa-clock-o bg-gray"></i>
@@ -423,204 +331,8 @@
   </div>
   <!-- /.content-wrapper -->
 
-  <!-- Control Sidebar -->
-  <aside class="control-sidebar control-sidebar-dark">
-    <!-- Create the tabs -->
-    <ul class="nav nav-tabs nav-justified control-sidebar-tabs">
-      <li><a href="#control-sidebar-home-tab" data-toggle="tab"><i class="fa fa-home"></i></a></li>
-      <li><a href="#control-sidebar-settings-tab" data-toggle="tab"><i class="fa fa-gears"></i></a></li>
-    </ul>
-    <!-- Tab panes -->
-    <div class="tab-content">
-      <!-- Home tab content -->
-      <div class="tab-pane" id="control-sidebar-home-tab">
-        <h3 class="control-sidebar-heading">Recent Activity</h3>
-        <ul class="control-sidebar-menu">
-          <li>
-            <a href="javascript:void(0)">
-              <i class="menu-icon fa fa-birthday-cake bg-red"></i>
 
-              <div class="menu-info">
-                <h4 class="control-sidebar-subheading">Langdon's Birthday</h4>
-
-                <p>Will be 23 on April 24th</p>
-              </div>
-            </a>
-          </li>
-          <li>
-            <a href="javascript:void(0)">
-              <i class="menu-icon fa fa-user bg-yellow"></i>
-
-              <div class="menu-info">
-                <h4 class="control-sidebar-subheading">Frodo Updated His Profile</h4>
-
-                <p>New phone +1(800)555-1234</p>
-              </div>
-            </a>
-          </li>
-          <li>
-            <a href="javascript:void(0)">
-              <i class="menu-icon fa fa-envelope-o bg-light-blue"></i>
-
-              <div class="menu-info">
-                <h4 class="control-sidebar-subheading">Nora Joined Mailing List</h4>
-
-                <p>nora@example.com</p>
-              </div>
-            </a>
-          </li>
-          <li>
-            <a href="javascript:void(0)">
-              <i class="menu-icon fa fa-file-code-o bg-green"></i>
-
-              <div class="menu-info">
-                <h4 class="control-sidebar-subheading">Cron Job 254 Executed</h4>
-
-                <p>Execution time 5 seconds</p>
-              </div>
-            </a>
-          </li>
-        </ul>
-        <!-- /.control-sidebar-menu -->
-
-        <h3 class="control-sidebar-heading">Tasks Progress</h3>
-        <ul class="control-sidebar-menu">
-          <li>
-            <a href="javascript:void(0)">
-              <h4 class="control-sidebar-subheading">
-                Custom Template Design
-                <span class="label label-danger pull-right">70%</span>
-              </h4>
-
-              <div class="progress progress-xxs">
-                <div class="progress-bar progress-bar-danger" style="width: 70%"></div>
-              </div>
-            </a>
-          </li>
-          <li>
-            <a href="javascript:void(0)">
-              <h4 class="control-sidebar-subheading">
-                Update Resume
-                <span class="label label-success pull-right">95%</span>
-              </h4>
-
-              <div class="progress progress-xxs">
-                <div class="progress-bar progress-bar-success" style="width: 95%"></div>
-              </div>
-            </a>
-          </li>
-          <li>
-            <a href="javascript:void(0)">
-              <h4 class="control-sidebar-subheading">
-                Laravel Integration
-                <span class="label label-warning pull-right">50%</span>
-              </h4>
-
-              <div class="progress progress-xxs">
-                <div class="progress-bar progress-bar-warning" style="width: 50%"></div>
-              </div>
-            </a>
-          </li>
-          <li>
-            <a href="javascript:void(0)">
-              <h4 class="control-sidebar-subheading">
-                Back End Framework
-                <span class="label label-primary pull-right">68%</span>
-              </h4>
-
-              <div class="progress progress-xxs">
-                <div class="progress-bar progress-bar-primary" style="width: 68%"></div>
-              </div>
-            </a>
-          </li>
-        </ul>
-        <!-- /.control-sidebar-menu -->
-
-      </div>
-      <!-- /.tab-pane -->
-      <!-- Stats tab content -->
-      <div class="tab-pane" id="control-sidebar-stats-tab">Stats Tab Content</div>
-      <!-- /.tab-pane -->
-      <!-- Settings tab content -->
-      <div class="tab-pane" id="control-sidebar-settings-tab">
-        <form method="post">
-          <h3 class="control-sidebar-heading">General Settings</h3>
-
-          <div class="form-group">
-            <label class="control-sidebar-subheading">
-              Report panel usage
-              <input type="checkbox" class="pull-right" checked>
-            </label>
-
-            <p>
-              Some information about this general settings option
-            </p>
-          </div>
-          <!-- /.form-group -->
-
-          <div class="form-group">
-            <label class="control-sidebar-subheading">
-              Allow mail redirect
-              <input type="checkbox" class="pull-right" checked>
-            </label>
-
-            <p>
-              Other sets of options are available
-            </p>
-          </div>
-          <!-- /.form-group -->
-
-          <div class="form-group">
-            <label class="control-sidebar-subheading">
-              Expose author name in posts
-              <input type="checkbox" class="pull-right" checked>
-            </label>
-
-            <p>
-              Allow the user to show his name in blog posts
-            </p>
-          </div>
-          <!-- /.form-group -->
-
-          <h3 class="control-sidebar-heading">Chat Settings</h3>
-
-          <div class="form-group">
-            <label class="control-sidebar-subheading">
-              Show me as online
-              <input type="checkbox" class="pull-right" checked>
-            </label>
-          </div>
-          <!-- /.form-group -->
-
-          <div class="form-group">
-            <label class="control-sidebar-subheading">
-              Turn off notifications
-              <input type="checkbox" class="pull-right">
-            </label>
-          </div>
-          <!-- /.form-group -->
-
-          <div class="form-group">
-            <label class="control-sidebar-subheading">
-              Delete chat history
-              <a href="javascript:void(0)" class="text-red pull-right"><i class="fa fa-trash-o"></i></a>
-            </label>
-          </div>
-          <!-- /.form-group -->
-        </form>
-      </div>
-      <!-- /.tab-pane -->
-    </div>
-  </aside>
-  <!-- /.control-sidebar -->
-  <!-- Add the sidebar's background. This div must be placed
-
-  
-  <!-- Add the sidebar's background. This div must be placed
-       immediately after the control sidebar -->
-  <div class="control-sidebar-bg"></div>
-</div>
-<!-- ./wrapper -->
+    
 
 <!-- modals -->
  <div class="modal fade" id="modal-default">
@@ -629,7 +341,7 @@
               <div class="modal-header">
                 <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                   <span aria-hidden="true">&times;</span></button>
-                <h4 class="modal-title">Pr√©parer un nouveau contrat</h4>
+                <h4 class="modal-title">PrÈparer un nouveau contrat</h4>
               </div>
            
 
@@ -657,24 +369,24 @@
 
                   <div class="col-lg-6">
               
-                  <label>Identifiant r√©servation</label>
+                  <label>Identifiant rÈservation</label>
                   <input type="text" class="form-control" placeholder="1" disabled>
 
-                  <label>libell√©</label>
+                  <label>libellÈ</label>
                   <input type="text" class="form-control" placeholder="1" disabled>
 
 
-                  <label>Prix de location √† la journ√©e</label>
+                  <label>Prix de location a† la journÈe</label>
                   <input type="text" class="form-control" placeholder="1" disabled>
 
                  
-                  <label>Cautions pay√©es</label>
+                  <label>Cautions payÈes</label>
                   <input type="text" class="form-control" placeholder="1" disabled>
 
 
                   </div>
                   <div class="col-lg-6">
-                  <label>Amendes de d√©passement/jour</label>
+                  <label>Amendes de dÈpassement/jour</label>
                   <input type="text" class="form-control" placeholder="1" disabled>
                  
 
@@ -737,24 +449,24 @@
 
                   <div class="col-lg-6">
               
-                  <label>Identifiant r√©servation</label>
+                  <label>Identifiant rÈservation</label>
                   <input type="text" class="form-control" placeholder="1" disabled>
 
-                  <label>libell√©</label>
+                  <label>libellÈ</label>
                   <input type="text" class="form-control" placeholder="1" disabled>
 
 
-                  <label>Prix de location √† la journ√©e</label>
+                  <label>Prix de location a† la journÈe</label>
                   <input type="text" class="form-control" placeholder="1" disabled>
 
                  
-                  <label>Cautions pay√©es</label>
+                  <label>Cautions payÈes</label>
                   <input type="text" class="form-control" placeholder="1" disabled>
 
 
                   </div>
                   <div class="col-lg-6">
-                  <label>Amendes de d√©passement/jour</label>
+                  <label>Amendes de dÈpassement/jour</label>
                   <input type="text" class="form-control" placeholder="1" disabled>
                  
 
@@ -856,24 +568,24 @@
 
                   <div class="col-lg-6">
               
-                  <label>Identifiant r√©servation</label>
+                  <label>Identifiant rÈservation</label>
                   <input type="text" class="form-control" placeholder="1" disabled>
 
-                  <label>libell√©</label>
+                  <label>libellÈ</label>
                   <input type="text" class="form-control" placeholder="1" disabled>
 
 
-                  <label>Prix de location √† la journ√©e</label>
+                  <label>Prix de location a† la journÈe</label>
                   <input type="text" class="form-control" placeholder="1" disabled>
 
                  
-                  <label>Cautions pay√©es</label>
+                  <label>Cautions payÈes</label>
                   <input type="text" class="form-control" placeholder="1" disabled>
 
 
                   </div>
                   <div class="col-lg-6">
-                  <label>Amendes de d√©passement/jour</label>
+                  <label>Amendes de dÈpassement/jour</label>
                   <input type="text" class="form-control" placeholder="1" disabled>
                  
 
@@ -936,24 +648,24 @@
 
                   <div class="col-lg-6">
               
-                  <label>Identifiant r√©servation</label>
+                  <label>Identifiant rÈservation</label>
                   <input type="text" class="form-control" placeholder="1" disabled>
 
-                  <label>libell√©</label>
+                  <label>libellÈ</label>
                   <input type="text" class="form-control" placeholder="1" disabled>
 
 
-                  <label>Prix de location √† la journ√©e</label>
+                  <label>Prix de location a† la journÈe</label>
                   <input type="text" class="form-control" placeholder="1" disabled>
 
                  
-                  <label>Cautions pay√©es</label>
+                  <label>Cautions payÈes</label>
                   <input type="text" class="form-control" placeholder="1" disabled>
 
 
                   </div>
                   <div class="col-lg-6">
-                  <label>Amendes de d√©passement/jour</label>
+                  <label>Amendes de dÈpassement/jour</label>
                   <input type="text" class="form-control" placeholder="1" disabled>
                  
 
@@ -1104,12 +816,12 @@
       <input type="email" class="form-control" id="inputEmail4" placeholder="" disabled="true">
     </div>
     <div class="form-group col-md-6">
-      <label for="inputEmail4">D√©signation</label>
-      <input type="email" class="form-control" id="inputEmail4" placeholder="Libell√© court" >
+      <label for="inputEmail4">DÈsignation</label>
+      <input type="email" class="form-control" id="inputEmail4" placeholder="LibellÈ court" >
     </div>
     <div class="form-group col-md-6">
       <label for="inputPassword4">Amende</label>
-      <input type="password" class="form-control" id="inputPassword4" placeholder="Amende de d√©passement">
+      <input type="password" class="form-control" id="inputPassword4" placeholder="Amende de dÈpassement">
     </div>
   </div>
   <div class="">
@@ -1125,7 +837,7 @@
   <br>
   <div class="form-group" >
     
-    <textarea class="form-control" rows="3" placeholder="Description et d√©fauts"></textarea>
+    <textarea class="form-control" rows="3" placeholder="Description et dÈfauts"></textarea>
   </div>
   
   <button type="button" class="btn btn-secondary" data-dismiss="modal">Annuler</button>

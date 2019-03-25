@@ -32,17 +32,23 @@
       <form class="form-login" action="registration" method="POST">
         <h2 class="form-login-heading">Enregistrement</h2>
         <div class="login-wrap">
-          <input type="text" class="form-control" placeholder="Nom d'utilisateur" name="username" required="required" autofocus>
+          <input type="email" class="form-control" placeholder="Nom d'utilisateur" name="email" required="required" autofocus>
           <br>
           <input type="password" class="form-control" placeholder="Mot de passe" name="password" required="required">
           <br>
           <input type="password" class="form-control" placeholder="Confirmation" name="confPassword" required="required">
           <br>
-          <input type="text" class="form-control" placeholder="Nom" name="firstName" required="required">
+          <input type="text" class="form-control" placeholder="Nom" name="nom" required="required">
           <br>
-          <input type="text" class="form-control" placeholder="Prénom" name="lastName" required="required">
+          <input type="text" class="form-control" placeholder="Prénom" name="prenom" required="required">
           <br>
-          <input type="email" class="form-control" placeholder="Email" name="emailId" required="required">
+          <br>
+          <input type="text" class="form-control" placeholder="Adresse" name="adresse" required="required">
+          <br>
+          <input type="number" class="form-control" placeholder="Numero de telephone" name="numtel" >
+          <br>
+           <br>
+          <input type="text" class="form-control" placeholder="Url de l'image" name="urlphoto" >
           <br>
            <hr>
           <button class="btn btn-theme btn-block" type="submit"> Valider</button>

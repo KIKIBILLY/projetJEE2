@@ -37,7 +37,6 @@ public class ListeClientControleur extends HttpServlet {
 		// TODO Auto-generated method stub
 		ClientDao clientListeDao;
 		clientListeDao = new ClientDao();
-		System.out.println("yes");
 		List<Client> clients = new ArrayList<Client>();
 		clients = clientListeDao.getAllListClient();
 		request.setAttribute("clients", clients);
